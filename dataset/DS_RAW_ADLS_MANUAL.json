@@ -1,0 +1,44 @@
+{
+	"name": "DS_RAW_ADLS_MANUAL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_RAW_SI",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "payments.csv",
+				"fileSystem": "manualfilepayments"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "order_id",
+				"type": "String"
+			},
+			{
+				"name": "payment_sequential",
+				"type": "String"
+			},
+			{
+				"name": "payment_type",
+				"type": "String"
+			},
+			{
+				"name": "payment_installments",
+				"type": "String"
+			},
+			{
+				"name": "payment_value",
+				"type": "String"
+			}
+		]
+	}
+}
