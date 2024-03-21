@@ -1,0 +1,19 @@
+{
+	"name": "DS_TGT_PRODUCT_PARQUET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SI_PAYMENTS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "products"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
