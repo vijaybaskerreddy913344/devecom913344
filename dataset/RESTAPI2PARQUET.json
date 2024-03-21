@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "customers",
 				"fileSystem": "customers"
 			},
 			"compressionCodec": "snappy"
