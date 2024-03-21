@@ -27,6 +27,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ONPREMSQL'"
 		},
+		"LS_BLOB_PAYMENT_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_BLOB_PAYMENT'"
+		},
+		"LS_SI_PAYMENTS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SI_PAYMENTS'"
+		},
 		"LS_ADLS_RAW_SI_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsrawecomexpress.dfs.core.windows.net/"
@@ -44,6 +52,10 @@
 			"defaultValue": "https://retoolapi.dev/VDIbjG/data"
 		},
 		"LS_SQL_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssiecomexpress.dfs.core.windows.net/"
+		},
+		"LS_SI_PAYMENTS_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlssiecomexpress.dfs.core.windows.net/"
 		},
@@ -86,6 +98,12 @@
 					"LS_SQL_PARQUET_accountKey": {
 						"value": "[parameters('LS_SQL_PARQUET_accountKey')]"
 					},
+					"LS_BLOB_PAYMENT_connectionString": {
+						"value": "[parameters('LS_BLOB_PAYMENT_connectionString')]"
+					},
+					"LS_SI_PAYMENTS_accountKey": {
+						"value": "[parameters('LS_SI_PAYMENTS_accountKey')]"
+					},
 					"ONPREMSQL_connectionString": {
 						"value": "[parameters('ONPREMSQL_connectionString')]"
 					},
@@ -103,10 +121,33 @@
 					},
 					"LS_SQL_PARQUET_properties_typeProperties_url": {
 						"value": "[parameters('LS_SQL_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_SI_PAYMENTS_properties_typeProperties_url": {
+						"value": "[parameters('LS_SI_PAYMENTS_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "adfdevecomexpress_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdevecomexpress_ArmTemplate_0')]"
+			]
 		}
 	]
 }

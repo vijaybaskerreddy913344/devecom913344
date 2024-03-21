@@ -20,6 +20,12 @@
 		"ONPREMSQL_connectionString": {
 			"value": ""
 		},
+		"LS_BLOB_PAYMENT_connectionString": {
+			"value": ""
+		},
+		"LS_SI_PAYMENTS_accountKey": {
+			"value": ""
+		},
 		"LS_ADLS_RAW_SI_properties_typeProperties_url": {
 			"value": "https://adlsrawecomexpress.dfs.core.windows.net/"
 		},
@@ -33,6 +39,9 @@
 			"value": "https://retoolapi.dev/VDIbjG/data"
 		},
 		"LS_SQL_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlssiecomexpress.dfs.core.windows.net/"
+		},
+		"LS_SI_PAYMENTS_properties_typeProperties_url": {
 			"value": "https://adlssiecomexpress.dfs.core.windows.net/"
 		}
 	}
