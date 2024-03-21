@@ -5,11 +5,20 @@
 		"factoryName": {
 			"value": "adfdevecomexpress"
 		},
+		"LS_REST_API_PAR_accountKey": {
+			"value": ""
+		},
 		"LS_SQL_PARQUET_accountKey": {
 			"value": ""
 		},
 		"ONPREMSQL_connectionString": {
 			"value": ""
+		},
+		"LS_REST_API_PAR_properties_typeProperties_url": {
+			"value": "https://adlssiecomexpress.dfs.core.windows.net/"
+		},
+		"LS_REST_API_PARQUET_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/VDIbjG/data"
 		},
 		"LS_SQL_PARQUET_properties_typeProperties_url": {
 			"value": "https://adlssiecomexpress.dfs.core.windows.net/"

@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfdevecomexpress"
 		},
+		"LS_REST_API_PAR_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_REST_API_PAR'"
+		},
 		"LS_SQL_PARQUET_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_SQL_PARQUET'"
@@ -14,6 +18,14 @@
 		"ONPREMSQL_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ONPREMSQL'"
+		},
+		"LS_REST_API_PAR_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssiecomexpress.dfs.core.windows.net/"
+		},
+		"LS_REST_API_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retoolapi.dev/VDIbjG/data"
 		},
 		"LS_SQL_PARQUET_properties_typeProperties_url": {
 			"type": "string",
@@ -46,11 +58,20 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_REST_API_PAR_accountKey": {
+						"value": "[parameters('LS_REST_API_PAR_accountKey')]"
+					},
 					"LS_SQL_PARQUET_accountKey": {
 						"value": "[parameters('LS_SQL_PARQUET_accountKey')]"
 					},
 					"ONPREMSQL_connectionString": {
 						"value": "[parameters('ONPREMSQL_connectionString')]"
+					},
+					"LS_REST_API_PAR_properties_typeProperties_url": {
+						"value": "[parameters('LS_REST_API_PAR_properties_typeProperties_url')]"
+					},
+					"LS_REST_API_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_REST_API_PARQUET_properties_typeProperties_url')]"
 					},
 					"LS_SQL_PARQUET_properties_typeProperties_url": {
 						"value": "[parameters('LS_SQL_PARQUET_properties_typeProperties_url')]"
