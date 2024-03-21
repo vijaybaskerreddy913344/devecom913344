@@ -1,0 +1,19 @@
+{
+	"name": "DS_RAW_PARQUET_MANUAL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_RAW_ADLSSI",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "payments"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
