@@ -1,0 +1,12 @@
+{
+	"name": "DSRESTAPI",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_REST_API_PARQUET",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}

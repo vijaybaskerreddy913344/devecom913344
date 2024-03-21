@@ -1,0 +1,19 @@
+{
+	"name": "RESTAPI2PARQUET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_REST_API_PAR",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "customers"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
