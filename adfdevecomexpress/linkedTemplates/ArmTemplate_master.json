@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfdevecomexpress"
 		},
+		"LS_ADLS_RAW_SI_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_RAW_SI'"
+		},
+		"LS_RAW_ADLSSI_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_RAW_ADLSSI'"
+		},
 		"LS_REST_API_PAR_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_REST_API_PAR'"
@@ -18,6 +26,14 @@
 		"ONPREMSQL_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ONPREMSQL'"
+		},
+		"LS_ADLS_RAW_SI_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsrawecomexpress.dfs.core.windows.net/"
+		},
+		"LS_RAW_ADLSSI_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssiecomexpress.dfs.core.windows.net/"
 		},
 		"LS_REST_API_PAR_properties_typeProperties_url": {
 			"type": "string",
@@ -58,6 +74,12 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_ADLS_RAW_SI_accountKey": {
+						"value": "[parameters('LS_ADLS_RAW_SI_accountKey')]"
+					},
+					"LS_RAW_ADLSSI_accountKey": {
+						"value": "[parameters('LS_RAW_ADLSSI_accountKey')]"
+					},
 					"LS_REST_API_PAR_accountKey": {
 						"value": "[parameters('LS_REST_API_PAR_accountKey')]"
 					},
@@ -66,6 +88,12 @@
 					},
 					"ONPREMSQL_connectionString": {
 						"value": "[parameters('ONPREMSQL_connectionString')]"
+					},
+					"LS_ADLS_RAW_SI_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_RAW_SI_properties_typeProperties_url')]"
+					},
+					"LS_RAW_ADLSSI_properties_typeProperties_url": {
+						"value": "[parameters('LS_RAW_ADLSSI_properties_typeProperties_url')]"
 					},
 					"LS_REST_API_PAR_properties_typeProperties_url": {
 						"value": "[parameters('LS_REST_API_PAR_properties_typeProperties_url')]"

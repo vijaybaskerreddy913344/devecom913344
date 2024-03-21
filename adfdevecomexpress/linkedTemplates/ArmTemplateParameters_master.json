@@ -5,6 +5,12 @@
 		"factoryName": {
 			"value": "adfdevecomexpress"
 		},
+		"LS_ADLS_RAW_SI_accountKey": {
+			"value": ""
+		},
+		"LS_RAW_ADLSSI_accountKey": {
+			"value": ""
+		},
 		"LS_REST_API_PAR_accountKey": {
 			"value": ""
 		},
@@ -13,6 +19,12 @@
 		},
 		"ONPREMSQL_connectionString": {
 			"value": ""
+		},
+		"LS_ADLS_RAW_SI_properties_typeProperties_url": {
+			"value": "https://adlsrawecomexpress.dfs.core.windows.net/"
+		},
+		"LS_RAW_ADLSSI_properties_typeProperties_url": {
+			"value": "https://adlssiecomexpress.dfs.core.windows.net/"
 		},
 		"LS_REST_API_PAR_properties_typeProperties_url": {
 			"value": "https://adlssiecomexpress.dfs.core.windows.net/"
